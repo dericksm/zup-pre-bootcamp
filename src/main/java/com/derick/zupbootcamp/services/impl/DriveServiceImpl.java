@@ -63,7 +63,7 @@ public class DriveServiceImpl implements DriveService {
 
 		MultipartFile multipartFile = clientCPFDTO.getFile();
 
-		String path = driveConfig.getTemporaryFolder();
+		String path = driveConfig.getTemporaryFolder().getFile().getAbsolutePath();
 		String fileName = multipartFile.getOriginalFilename();
 
 		java.io.File transferedFile = new java.io.File(path, fileName);

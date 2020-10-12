@@ -31,8 +31,8 @@ public class DriveConfig {
     @Value("${google.credentials.folder.path}")
     private Resource credentialsFolder;
 
-    @Value("${temp.path}")
-    private String temporaryFolder;
+    @Value("${temp.folder.path}")
+    private Resource temporaryFolder;
 
     public static HttpTransport getHttpTransport() {
         return HTTP_TRANSPORT;
@@ -90,11 +90,11 @@ public class DriveConfig {
         this.credentialsFolder = credentialsFolder;
     }
 
-    public String getTemporaryFolder() {
+    public Resource getTemporaryFolder() {
         return temporaryFolder;
     }
 
-    public void setTemporaryFolder(String temporaryFolder) {
+    public void setTemporaryFolder(Resource temporaryFolder) {
         this.temporaryFolder = temporaryFolder;
     }
 }
