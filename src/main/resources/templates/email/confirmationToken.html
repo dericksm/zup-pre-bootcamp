@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:remove="all">Token para troca de senha!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}"/>
+</head>
+<body>
+<div class="row">
+    <div class="col-4 jumbotron">
+        <h1 class="display-4">Olá, <span th:text="${token.user.client.firstName}"></span>!</h1>
+        <p class="lead">Segue abaixo seu token para troca de senha.</p>
+        <hr class="my-4">
+        <p>Token: <span th:text="${token.confirmationToken}"></span></p>
+    </div>
+</div>
+
+</body>
+</html>

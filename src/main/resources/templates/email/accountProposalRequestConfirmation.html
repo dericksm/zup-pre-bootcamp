@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:remove="all">Proposta de conta não aceita!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}"/>
+</head>
+<body>
+<div class="row">
+    <div class="col-4 jumbotron">
+        <h1 class="display-4">Olá, <span th:text="${proposal.client.firstName}"></span>!</h1>
+        <p class="lead">Notamos que você realizou uma proposta de conta, mas ainda não a aceitou!</p>
+        <hr class="my-4">
+        <p>Que tal seguir o próximo passo? Basta aceitá-la e nós faremos todo o processo de aprovação!</p>
+    </div>
+</div>
+
+</body>
+</html>

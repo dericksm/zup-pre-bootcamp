@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:remove="all">Confirmação de conta!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}"/>
+</head>
+<body>
+<div class="row">
+    <div class="col-4 jumbotron">
+        <h1 class="display-4">Olá, <span th:text="${account.client.firstName}"></span>!</h1>
+        <p class="lead">Parabéns, sua conta foi criada com sucesso!</p>
+        <hr class="my-4">
+        <p>Agência: <span th:text="${account.agency}"></span></p>
+        <p>Conta: <span th:text="${account.accountNumber}"></span></p>
+        <p>Banco: <span th:text="${account.bankNumber}"></span></p>
+        <p>Saldo atual: R$ <span th:text="${account.balance}"></span></p>
+    </div>
+</div>
+
+</body>
+</html>
